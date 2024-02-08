@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=josefin+Sans&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.credit-card {
+  width: 400px;
+  height: 250px;
+  color: #fff;
+  cursor: pointer;
+  perspective: 1000px;
+  border-radius: 15px;
+}
+
+.credit-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 1;
+  backface-visibility: hidden;
+}
+
+.credit-card-map {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.75;
+}
+
+.credit-card-bar {
+  background: #222;
+  margin-left: -30px;
+  margin-right: -30px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.card-text {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.signature {
+  margin-top: 30px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.credit-card-number {
+  background-color: transparent !important;
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.credit-card-number::placeholder {
+  color: white !important;
+  opacity: 1 !important; /* Firefox */
+}
+
+.credit-card-input {
+  background-color: transparent !important;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.credit-card-input::placeholder {
+  color: white !important;
+  opacity: 1 !important; /* Firefox */
+}
+
+.exp-date {
+  text-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.exp-date-text {
+  text-align: end;
+  font-size: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.credit-card-cvv {
+  background-image: url(images/pattern.png);
+}
+
+.credit-card-cvv div {
+  background: #fff;
+  color: #000;
+  font-size: 22px;
+  padding: 10px 20px;
+}

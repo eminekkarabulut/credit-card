@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link href="assets/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="credit-card">
+          <div class="credit-card-inner">
+            <div class="card-front">
+              <img src="assets/images/map.png" class="credit-card-map" />
+
+              <div class="row justify-content-start">
+                <div class="col-6 ps-0">
+                  <img id="bankLogo" src="assets/images/akbank_logo.png" class="img-fluid" />
+                </div>
+              </div>
+
+              <div class="row justify-content-start">
+                <div class="col-4">
+                  <img src="assets/images/chip.png" class="img-fluid" style="width: 30% !important" />
+                </div>
+              </div>
+
+              <div class="row justify-content-between">
+                <input id="cardNumberInput" type="text" class="form-control credit-card-number" data-kt-dialer-control="input" readonly="readonly" />
+              </div>
+
+              <div class="row justify-content-center">
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-4 exp-date-text">
+                      VALID
+                      <br />
+                      THRU
+                    </div>
+                    <div class="col-8 exp-date">
+                      <input id="cardDateMonthInput" type="text" class="form-control credit-card-input text-end" data-kt-dialer-control="input" readonly="readonly" />
+                      <span>/</span>
+                      <input id="cardDateYearInput" type="text" class="form-control credit-card-input" data-kt-dialer-control="input" readonly="readonly" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row justify-content-between">
+                <div class="col-9">
+                  <input id="cardHolderInput" type="text" class="form-control credit-card-input" data-kt-dialer-control="input" readonly="readonly" />
+                </div>
+                <div class="col-3 text-end">
+                  <img id="schemeTypeLogo" src="assets/images/mastercard.svg" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+
+            <div class="card-back">
+              <img src="assets/images/map.png" class="credit-card-map" />
+              <div class="credit-card-bar"></div>
+              <div class="row credit-card-cvv justify-content-end">
+                <input id="cardCvvInput" type="text" class="form-control credit-card-input text-dark text-end" data-kt-dialer-control="input" readonly="readonly" />
+              </div>
+              <div class="row justify-content-between">
+                <div class="col-9"></div>
+                <div class="col-3 text-end">
+                  <img id="schemeTypeLogoBack" src="assets/images/mastercard.svg" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <form class="w-50">
+          <div class="form-group row mt-3">
+            <div class="col-12">
+              <label for="cardHolder">Kart Üzerindeki İsim</label>
+              <input id="cardHolder" name="holderName" type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group row mt-3">
+            <div class="col-12">
+              <label for="cardNumber">Kart Numarası</label>
+              <input id="cardNumber" name="cardNumber" type="text" class="form-control" maxlength="19" />
+            </div>
+          </div>
+          <div class="form-group row mt-3">
+            <div class="col-lg-8">
+              <label>Son Kullanma Tarihi</label>
+              <div class="d-flex">
+                <select id="cardDateMonth" name="expMounth" class="form-control w-50">
+                  <option disabled="disabled" value="" selected="selected">Ay</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <select id="cardDateYear" name="expYear" class="form-control w-50">
+                  <option disabled="disabled" value="" selected="selected">Yıl</option>
+                  <option value="23">2023</option>
+                  <option value="24">2024</option>
+                  <option value="25">2025</option>
+                  <option value="26">2026</option>
+                  <option value="27">2027</option>
+                  <option value="28">2028</option>
+                  <option value="29">2029</option>
+                  <option value="30">2030</option>
+                  <option value="31">2031</option>
+                  <option value="32">2032</option>
+                  <option value="33">2033</option>
+                  <option value="34">2034</option>
+                  <option value="35">2035</option>
+                  <option value="36">2036</option>
+                  <option value="37">2037</option>
+                  <option value="38">2038</option>
+                  <option value="39">2039</option>
+                  <option value="40">2040</option>
+                  <option value="41">2041</option>
+                  <option value="42">2042</option>
+                  <option value="43">2043</option>
+                  <option value="44">2044</option>
+                  <option value="45">2045</option>
+                  <option value="46">2046</option>
+                  <option value="47">2047</option>
+                  <option value="48">2048</option>
+                  <option value="49">2049</option>
+                  <option value="50">2050</option>
+                  <option value="51">2051</option>
+                  <option value="52">2052</option>
+                  <option value="53">2053</option>
+                  <option value="54">2054</option>
+                  <option value="55">2055</option>
+                  <option value="56">2056</option>
+                  <option value="57">2057</option>
+                  <option value="58">2058</option>
+                  <option value="59">2059</option>
+                  <option value="60">2060</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <label for="cardCvv">CVV</label>
+              <input type="text" class="form-control" id="cardCvv" name="cvv" placeholder="CVV" maxlength="3" />
+            </div>
+
+            <input type="hidden" id="bankId" name="bankId" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js" integrity="sha512-efAcjYoYT0sXxQRtxGY37CKYmqsFVOIwMApaEbrxJr4RwqVVGw8o+Lfh/+59TU07+suZn1BWq4fDl5fdgyCNkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <script>
+      var binInfo;
+      $(document).ready(function () {
+        $("#cardNumber").inputmask("9999 9999 9999 9999");
+        $("#cardNumberInput").inputmask("9999 9999 9999 9999");
+        $("#cardCvv").inputmask("999");
+
+        ListenCreditCardInputs();
+      });
+
+      function ListenCreditCardInputs() {
+        $("#cardNumber").on("keyup paste", function () {
+          var binNumber = $(this).val();
+          $("#cardNumberInput").val(binNumber);
+        });
+
+        $("#cardHolder").on("keyup paste", function () {
+          $("#cardHolderInput").val($(this).val().toUpperCase());
+        });
+
+        $("#cardDateMonth").on("change", function () {
+          $("#cardDateMonthInput").val($(this).val());
+        });
+
+        $("#cardDateYear").on("change", function () {
+          $("#cardDateYearInput").val($(this).val());
+        });
+
+        $("#cardCvv").on("keyup paste", function () {
+          $("#cardCvvInput").val($(this).val());
+        });
+
+        $("#cardCvv").on("focus", function () {
+          RotateBack();
+        });
+
+        $("#cardCvv").on("focusout", function () {
+          RotateFront();
+        });
+      }
+
+      function RotateBack() {
+        $(".credit-card-inner").css({ WebkitTransform: "rotateY(-180deg)" });
+        $(".credit-card-inner").css({ "-moz-transform": "rotateY(-180deg)" });
+      }
+
+      function RotateFront() {
+        $(".credit-card-inner").css({ WebkitTransform: "rotateY(0deg)" });
+        $(".credit-card-inner").css({ "-moz-transform": "rotateY(0deg)" });
+      }
+    </script>
+  </body>
+</html>
